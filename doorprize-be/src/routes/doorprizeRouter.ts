@@ -5,12 +5,13 @@ import {
   getDoorprize,
   updateDoorprize,
 } from "../controller/doorprize";
+import multerMiddleware from "../middleware/upload";
 
 const doorprizeRouter = Router();
 
-doorprizeRouter.post("/doorprize", createDoorprize);
+doorprizeRouter.post("/doorprize", multerMiddleware(), createDoorprize);
 doorprizeRouter.get("/doorprize", getDoorprize);
-doorprizeRouter.put("/doorprize/:id", updateDoorprize);
+doorprizeRouter.put("/doorprize/:id", multerMiddleware(), updateDoorprize);
 doorprizeRouter.delete("/doorprize/:id", deleteDoorprize);
 
 export default doorprizeRouter;

@@ -23,4 +23,5 @@
   model Doorprize {
     id   Int     @id @default(autoincrement())
     name String?
+    image String?
   }

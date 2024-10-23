@@ -38,3 +38,9 @@ export interface IEditProfile {
   username?: string;
   fullname?: string;
 }
+
+export interface IDoorprize {
+  id?: number;
+  name?: string;
+  image?: string;
+}
